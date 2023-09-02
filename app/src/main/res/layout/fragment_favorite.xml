@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.favorite.FavoriteFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:id="@+id/radio_group"
+            android:orientation="horizontal"
+            android:background="@drawable/radio_normal"
+            android:layout_marginVertical="16dp"
+            android:layout_marginHorizontal="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="48dp">
+
+            <RadioButton
+                android:id="@+id/subreddits_button"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:padding="16dp"
+                android:gravity="center"
+                android:button="@android:color/transparent"
+                android:background="@drawable/radio_selector"
+                android:textColor="@drawable/radio_text_selector"
+                android:textSize="12sp"
+                android:checked="true"
+                android:layout_weight="6"
+                android:text="@string/subreddits"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"/>
+
+            <RadioButton
+                android:id="@+id/comments_button"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_height="48dp"
+                android:layout_weight="6"
+                android:button="@android:color/transparent"
+                android:background="@drawable/radio_selector"
+                android:textColor="@drawable/radio_text_selector"
+                android:textSize="12sp"
+                android:padding="16dp"
+                android:text="@string/comments"/>
+
+        </RadioGroup>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            tools:listitem="@layout/comment_by_user_item"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            />
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/progress_circular"
+        android:layout_width="match_parent"
+        android:background="#66000000"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:layout_gravity="center"
+            android:layout_width="96dp"
+            android:layout_height="96dp"/>
+    </FrameLayout>
+
+</FrameLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="ru.fwnz.humblr.ui.main.subreddits.subreddits.SubredditsFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_subreddits" >
+        <action
+            android:id="@+id/action_navigation_home_to_linksFragment"
+            app:destination="@id/linksFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="ru.fwnz.humblr.ui.main.favorite.FavoriteFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_favorite" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="ru.fwnz.humblr.ui.main.profile.profile.ProfileFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_navigation_notifications_to_friendsFragment"
+            app:destination="@id/friendsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/linksFragment"
+        android:name="ru.fwnz.humblr.ui.main.subreddits.links.LinksFragment"
+        android:label="fragment_links"
+        tools:layout="@layout/fragment_links" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_linksFragment_to_infoFragment"
+            app:destination="@id/infoFragment" />
+        <action
+            android:id="@+id/action_linksFragment_to_linkFragment"
+            app:destination="@id/linkFragment" />
+        <action
+            android:id="@+id/action_linksFragment_to_userFragment"
+            app:destination="@id/userFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="ru.fwnz.humblr.ui.main.subreddits.info.InfoFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" >
+        <argument
+            android:name="subredditDisplayName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/linkFragment"
+        android:name="ru.fwnz.humblr.ui.main.subreddits.link.LinkFragment"
+        android:label="fragment_link"
+        tools:layout="@layout/fragment_link" >
+        <action
+            android:id="@+id/action_linkFragment_to_linkPagedFragment"
+            app:destination="@id/linkPagedFragment" />
+        <argument
+            android:name="subredditName"
+            app:argType="string" />
+        <argument
+            android:name="linkId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/linkPagedFragment"
+        android:name="ru.fwnz.humblr.ui.main.subreddits.linkPaged.LinkPagedFragment"
+        android:label="fragment_link_paged"
+        tools:layout="@layout/fragment_link_paged">
+        <argument
+            android:name="subredditName"
+            app:argType="string" />
+        <argument
+            android:name="linkId"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="ru.fwnz.humblr.ui.main.subreddits.user.UserFragment"
+        android:label="fragment_user"
+        tools:layout="@layout/fragment_user" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/friendsFragment"
+        android:name="ru.fwnz.humblr.ui.main.profile.friends.FriendsFragment"
+        android:label="fragment_friends"
+        tools:layout="@layout/fragment_friends" />
+</navigation>

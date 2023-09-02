@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/humblr_background"
+    tools:context=".ui.main.profile.profile.ProfileFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/person_card"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="308"
+                app:cardCornerRadius="15dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1:0.9"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.20"
+                app:layout_constraintWidth_percent="0.83">
+
+            </androidx.cardview.widget.CardView>
+            <FrameLayout
+                android:id="@+id/avatar_frame"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintTop_toTopOf="@id/person_card"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:elevation="2dp"
+                android:layout_marginTop="8dp">
+                <ImageView
+                    android:id="@+id/avatar_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:src="@tools:sample/avatars" />
+                <ProgressBar
+                    android:id="@+id/avatar_progress"
+                    android:padding="16dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:indeterminateDrawable="@drawable/progress"
+                    android:indeterminateOnly="true"/>
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/text_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:elevation="2dp"
+                android:textStyle="bold"
+                android:paddingHorizontal="20dp"
+                android:background="@drawable/account_text_background"
+                tools:text="Разработчик"
+                android:textColor="@color/black"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/avatar_frame"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/text_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:elevation="2dp"
+                android:textStyle="bold"
+                android:paddingHorizontal="20dp"
+                android:background="@drawable/account_text_background"
+                android:textColor="@color/black"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/text_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="r\\androidman" />
+
+            <TextView
+                android:id="@+id/text_karma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:elevation="2dp"
+                android:textSize="16sp"
+                android:textAlignment="center"
+                app:layout_constraintTop_toBottomOf="@id/text_link"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="@string/account_details" />
+
+            <Button
+                android:id="@+id/follow_subbredit_from_profile_button"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:text="@string/friends_list"
+                android:textSize="16sp"
+                android:layout_marginTop="16dp"
+                android:textAllCaps="false"
+                android:background="@drawable/account_button_background"
+                app:layout_constraintWidth_percent="0.83"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/person_card"
+                />
+            <Button
+                android:id="@+id/clear_saved_button"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:textSize="16sp"
+                android:background="@drawable/account_button_background"
+                android:text="@string/clear_favorites"
+                android:textAllCaps="false"
+                android:layout_marginTop="15dp"
+                app:layout_constraintWidth_percent="0.83"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/follow_subbredit_from_profile_button"
+                />
+            <Button
+                android:id="@+id/logout_button"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:textAllCaps="false"
+                android:background="@drawable/account_button_background"
+                app:backgroundTint="@color/humblr_exit_button"
+                android:textSize="16sp"
+                android:text="@string/logout"
+                android:layout_marginTop="52dp"
+                app:layout_constraintWidth_percent="0.83"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/clear_saved_button"
+                />
+            <View
+                android:layout_width="match_parent"
+                app:layout_constraintTop_toBottomOf="@id/logout_button"
+                android:layout_height="100dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <FrameLayout
+        android:id="@+id/progress_circular"
+        android:layout_width="match_parent"
+        android:background="#66000000"
+        android:layout_height="match_parent">
+        <ProgressBar
+            android:layout_gravity="center"
+            android:layout_width="96dp"
+            android:layout_height="96dp"/>
+    </FrameLayout>
+
+
+
+</FrameLayout>

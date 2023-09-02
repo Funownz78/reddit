@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">Humblr</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Favorites</string>
+    <string name="title_notifications">Profile</string>
+    <string name="skip">Пропустить</string>
+    <string name="intro0_title">Добро пожаловать в Humblr</string>
+    <string name="intro0_descr_line0">Здесь собраны сообщества по\nвсевозможным интересам</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="intro1title">SubHumblr</string>
+    <string name="intro1_descr_line0">Ты можешь найти новые сабы\nпо интересам и посмотреть сабы, на\nкоторые подписан</string>
+    <string name="intro2_descr_line0">Вкладка избранное хранит закладки\nс комментариями и сабами. В\nпрофиле ты найдёшь информацию о\nсебе.</string>
+    <string name="intro2title">Делись и сохраняй</string>
+    <string name="done">Готово</string>
+    <string name="login_descr">Найди единомышленников с Humblr</string>
+    <string name="login">Войти</string>
+    <string name="friends_list">Список друзей</string>
+    <string name="clear_favorites">Очистить сохраненные</string>
+    <string name="logout">Выйти</string>
+    <string name="account_details">Карма: %d\nСоздан: %s</string>
+    <string name="search">Поиск</string>
+    <string name="newText">Новое</string>
+    <string name="popularText">Популярное</string>
+    <string name="share"><u>Поделиться</u></string>
+    <string name="share_via">Поделиться через</string>
+    <string name="follow">Подписаться</string>
+    <string name="unfollow">Отписаться</string>
+    <string name="show_all">Показать всё</string>
+    <string name="save"><u>Сохранить</u></string>
+    <string name="more_response">Ещё %d ответов</string>
+    <string name="saved">Сохранено</string>
+    <string name="created">Создан:\n%s</string>
+    <string name="subreddits">Сабреддиты</string>
+    <string name="comments">Комментарии</string>
+    <string name="info">Инфо</string>
+    <string name="no_internet">No internet connection</string>
+    <string name="home">Сабреддиты</string>
+    <string name="links">Темы</string>
+    <string name="link">Комментарии</string>
+    <string name="favorites">Любимое</string>
+    <string name="profile">Профиль</string>
+    <string name="user">О пользователе</string>
+    <string name="logout_alert_title">Поддтвердите выход</string>
+    <string name="logout_alert_message">Вы уверены? Локальные данные приложения будут удалены.</string>
+    <string name="action_yes">Да</string>
+    <string name="action_no">Отмена</string>
+
+    <plurals name="estimated_hours">
+        <item quantity="one">опубликовано\n%1$d час назад</item>
+        <item quantity="few">опубликовано\n%1$d часа назад</item>
+        <item quantity="many">опубликовано\n%1$d часов назад</item>
+        <item quantity="other">опубликовано\n%1$d часов назад</item>
+    </plurals>
+    <plurals name="comments">
+        <item quantity="one">%1$d комментарий</item>
+        <item quantity="few">%1$d комментария</item>
+        <item quantity="many">%1$d комментариев</item>
+        <item quantity="other">%1$d комментариев</item>
+    </plurals>
+
+</resources>
